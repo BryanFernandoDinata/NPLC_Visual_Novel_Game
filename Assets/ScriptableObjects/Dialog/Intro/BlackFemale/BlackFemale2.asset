@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07df8cc0cf4f0cf479b317b17d714621, type: 3}
+  m_Name: BlackFemale2
+  m_EditorClassIdentifier: 
+  Dialog: What are you doing here?
+  dialogExpressionIndex: 3
+  haveOption: 0
+  possibleNextDialogs:
+  - {fileID: 11400000, guid: 3f9b05580cc4ba94495b95ac2c121af3, type: 2}
+  characterData: {fileID: 11400000, guid: 14149312899c2e64ca7d43bd0c34fe12, type: 2}

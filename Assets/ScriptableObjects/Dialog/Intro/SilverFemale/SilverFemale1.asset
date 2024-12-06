@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07df8cc0cf4f0cf479b317b17d714621, type: 3}
+  m_Name: SilverFemale1
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 5f9ae52cd938ae347989d09389bed755, type: 2}
+  Dialog: Hi Tsukumi, im Shiina
+  shouldChangeScene: 0
+  nextSceneName: 
+  isSpeaker1: 1
+  dialogExpressionIndex: 2
+  shouldPlaySound: 1
+  dialogSound: {fileID: 8300000, guid: 840bf0b23c7e7cc49abebf5732b7f18c, type: 3}

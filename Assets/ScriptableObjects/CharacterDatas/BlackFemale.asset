@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf592662813404745b3a23e367ddebf6, type: 3}
+  m_Name: BlackFemale
+  m_EditorClassIdentifier: 
+  characterName: Tsukumi
+  characterExpressions:
+  - {fileID: 4760884034685434487, guid: 739b7c404726c5947ac7990fd240e508, type: 3}
+  - {fileID: 4168223620612965649, guid: fb13edf466981d145b11aa909f0d6ba2, type: 3}
+  - {fileID: 7809758378828319974, guid: 8c35a2cf64ed2f945b4d457a77b36e7a, type: 3}
+  - {fileID: -7964798677572133742, guid: 7b8d69e215a7ee44ba5e80df0b2d55d1, type: 3}
+  - {fileID: -7264426245741427392, guid: ca25057e735c87b47ad3cbed3536d52b, type: 3}
+  - {fileID: -8383105248224710906, guid: cc6d82128cd672b45ac426033799cdac, type: 3}
+  - {fileID: 4031561657114163801, guid: 95da641f49a04604e817770bffc31e27, type: 3}
+  - {fileID: -9185575521521017926, guid: 436de55147cb4954cb34c4c96ae81f9a, type: 3}
+  - {fileID: -4219282388987329728, guid: a0a4cbe0d5c825940b4c3ca302788fda, type: 3}
