@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class DialogController : MonoBehaviour
 {
     public static DialogController instance;
+    
+    [Header("Regular dialog")]
     public Image speaker1;
     public Image speaker2;
     public TextMeshProUGUI nameText;
@@ -15,6 +17,10 @@ public class DialogController : MonoBehaviour
     public List<DialogSO> dialogLines = new List<DialogSO>();
     public int currentLine;
     public float wordSpeed;
+
+    [Header("Narator dialog")]
+    public TextMeshProUGUI naratorDialogText;
+    public Animator blackPanelAnim;
     private bool justStarted;
 
     private void Awake()
@@ -32,6 +38,7 @@ public class DialogController : MonoBehaviour
     void Start()
     {
         dialogText.text = "";
+        naratorDialogText.text = "";
 
         CheckSpeaker();
         
@@ -52,34 +59,66 @@ public class DialogController : MonoBehaviour
     }
     IEnumerator Typing()
     {
-        foreach(char letter in dialogLines[currentLine].Dialog.ToCharArray())
-        {  
-            dialogText.text += letter;
-            //AudioManager.instance.PlaySFX(8);
-            yield return new WaitForSeconds(wordSpeed);
-        }
+        if(!dialogLines[currentLine].isNarator)
+        {
+            foreach(char letter in dialogLines[currentLine].Dialog.ToCharArray())
+            {  
+                dialogText.text += letter;
+                //AudioManager.instance.PlaySFX(8);
+                yield return new WaitForSeconds(wordSpeed);
+            }
 
-        if(dialogText.text == dialogLines[currentLine].Dialog)
-        {   
-            if(pressEObject.activeInHierarchy == false)
-            {
-                pressEObject.SetActive(true);
+            if(dialogText.text == dialogLines[currentLine].Dialog)
+            {   
+                if(pressEObject.activeInHierarchy == false)
+                {
+                    pressEObject.SetActive(true);
+                }
+                if(dialogLines[currentLine].shouldChangeScene)
+                {
+                    SaveManager.instance.Save(dialogLines[currentLine].nextSceneName);
+                    SceneManager.LoadScene(dialogLines[currentLine].nextSceneName);
+                }
             }
-            if(dialogLines[currentLine].shouldChangeScene)
-            {
-                SaveManager.instance.Save(dialogLines[currentLine].nextSceneName);
-                SceneManager.LoadScene(dialogLines[currentLine].nextSceneName);
+        }else
+        {
+            foreach(char letter in dialogLines[currentLine].Dialog.ToCharArray())
+            {  
+                naratorDialogText.text += letter;
+                //AudioManager.instance.PlaySFX(8);
+                yield return new WaitForSeconds(wordSpeed);
+            }
+
+            if(naratorDialogText.text == dialogLines[currentLine].Dialog)
+            {   
+                yield return new WaitForSeconds(1);
+                // fade out
+                blackPanelAnim.SetTrigger("fadeOut");
+
+                if(dialogLines[currentLine].shouldChangeScene)
+                {
+                    SaveManager.instance.Save(dialogLines[currentLine].nextSceneName);
+                    SceneManager.LoadScene(dialogLines[currentLine].nextSceneName);
+                }
             }
         }
+        
     }
     public void CheckSpeaker()
     {
-        if(dialogLines[currentLine].isSpeaker1)
+        if(dialogLines[currentLine].characterData.characterName != "Narator")
         {
-            speaker1.sprite = dialogLines[currentLine].characterData.characterExpressions[dialogLines[currentLine].dialogExpressionIndex];
+            nameText.text = dialogLines[currentLine].characterData.characterName;
+            if(dialogLines[currentLine].isSpeaker1)
+            {
+                speaker1.sprite = dialogLines[currentLine].characterData.characterExpressions[dialogLines[currentLine].dialogExpressionIndex];
+            }else
+            {   
+                speaker2.sprite = dialogLines[currentLine].characterData.characterExpressions[dialogLines[currentLine].dialogExpressionIndex];
+            }
         }else
-        {   
-            speaker2.sprite = dialogLines[currentLine].characterData.characterExpressions[dialogLines[currentLine].dialogExpressionIndex];
+        {
+            blackPanelAnim.SetTrigger("fadeIn");
         }
         if(dialogLines[currentLine].shouldPlaySound)
         {
@@ -109,6 +148,7 @@ public class DialogController : MonoBehaviour
         {
             currentLine++;
             dialogText.text = "";
+            naratorDialogText.text = "";
             StartCoroutine(Typing());
         }
         
@@ -119,6 +159,7 @@ public class DialogController : MonoBehaviour
             speaker1.sprite = dialogLines[currentLine].characterData.characterExpressions[dialogLines[currentLine].dialogExpressionIndex];
         }else
         {   
+            if(dialogLines[currentLine].characterData.characterExpressions.Length != 0)
             speaker2.sprite = dialogLines[currentLine].characterData.characterExpressions[dialogLines[currentLine].dialogExpressionIndex];
         }
     }

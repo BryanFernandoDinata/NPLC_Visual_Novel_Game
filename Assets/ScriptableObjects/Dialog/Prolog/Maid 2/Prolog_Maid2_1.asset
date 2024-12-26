@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07df8cc0cf4f0cf479b317b17d714621, type: 3}
+  m_Name: Prolog_Maid2_1
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 660776f0696e51e4f9cba576884a603d, type: 2}
+  Dialog: Is that a teacup?
+  isNarator: 0
+  shouldChangeScene: 0
+  nextSceneName: 
+  isSpeaker1: 0
+  dialogExpressionIndex: 0
+  shouldPlaySound: 0
+  dialogSound: {fileID: 0}

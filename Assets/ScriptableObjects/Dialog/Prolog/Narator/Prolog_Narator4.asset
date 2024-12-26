@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07df8cc0cf4f0cf479b317b17d714621, type: 3}
+  m_Name: Prolog_Narator4
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 7d0e694a6a7919c47b9de361066c4730, type: 2}
+  Dialog: '* Goosebumps run through me as I look up, observing the people around
+    me. There are way too many people here to figure out who wrote this letter and
+    this confirms my suspicion about the maid lying on the floor being murdered.
+    I was lost in my own thoughts when somebody greets me. *'
+  isNarator: 1
+  shouldChangeScene: 0
+  nextSceneName: 
+  isSpeaker1: 0
+  dialogExpressionIndex: 0
+  shouldPlaySound: 0
+  dialogSound: {fileID: 0}
