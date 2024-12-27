@@ -11,6 +11,8 @@ public class DialogController : MonoBehaviour
     [Header("Regular dialog")]
     public Image speaker1;
     public Image speaker2;
+    public GameObject dialogBox;
+    public GameObject nameBox;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogText;
     public GameObject pressEObject;
@@ -53,7 +55,6 @@ public class DialogController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E))
             {
                 ContinueDialog();
-                CheckSpeaker();
             }
         }
     }
@@ -106,8 +107,27 @@ public class DialogController : MonoBehaviour
     }
     public void CheckSpeaker()
     {
+        if(dialogLines[currentLine].characterData.characterName == "MC")
+        {
+            dialogBox.SetActive(true);
+            nameBox.SetActive(false);
+        }else
+        {
+            if(dialogLines[currentLine].characterData.characterName == "Narator")
+            {
+                dialogBox.SetActive(false);
+                nameBox.SetActive(false);
+            }else
+            {
+                dialogBox.SetActive(true);
+                nameBox.SetActive(true);
+            }
+        }
+
         if(dialogLines[currentLine].characterData.characterName != "Narator")
         {
+          
+
             nameText.text = dialogLines[currentLine].characterData.characterName;
             if(dialogLines[currentLine].isSpeaker1)
             {
@@ -151,7 +171,9 @@ public class DialogController : MonoBehaviour
             naratorDialogText.text = "";
             StartCoroutine(Typing());
         }
-        
+
+        CheckSpeaker();
+
         nameText.text = dialogLines[currentLine].characterData.characterName;
         
         if(dialogLines[currentLine].isSpeaker1)

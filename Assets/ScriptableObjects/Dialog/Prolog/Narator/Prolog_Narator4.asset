@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Prolog_Narator4
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 7d0e694a6a7919c47b9de361066c4730, type: 2}
-  Dialog: '* Goosebumps run through me as I look up, observing the people around
-    me. There are way too many people here to figure out who wrote this letter and
-    this confirms my suspicion about the maid lying on the floor being murdered.
-    I was lost in my own thoughts when somebody greets me. *'
+  Dialog: Goosebumps run through me as I look up, observing the people around me.
+    There are way too many people here to figure out who wrote this letter and this
+    confirms my suspicion about the maid lying on the floor being murdered. I was
+    lost in my own thoughts when somebody greets me.
   isNarator: 1
   shouldChangeScene: 0
   nextSceneName: 

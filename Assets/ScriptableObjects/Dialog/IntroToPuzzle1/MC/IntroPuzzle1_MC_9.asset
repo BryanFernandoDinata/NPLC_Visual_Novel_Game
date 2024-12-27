@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07df8cc0cf4f0cf479b317b17d714621, type: 3}
-  m_Name: IntroPuzzle1_Butler_1
+  m_Name: IntroPuzzle1_MC_9
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: 6d016d5d25e9c0648914605b21a1a939, type: 2}
-  Dialog: "Of course, I\u2019ll be back in a minute"
+  characterData: {fileID: 11400000, guid: 1f8dd2f64d9b70e4494b9d9dff3e798a, type: 2}
+  Dialog: "Well, we can\u2019t wait until the master of the mansion returns. Let\u2019s
+    see if I can do something."
   isNarator: 0
   shouldChangeScene: 0
   nextSceneName: 

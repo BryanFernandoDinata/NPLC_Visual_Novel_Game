@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Prolog_Narator3
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 7d0e694a6a7919c47b9de361066c4730, type: 2}
-  Dialog: '* As I observed the scene, I noticed that the body had rashes all over
-    her with red lines on her neck which looked to be scratches. *'
+  Dialog: As I observed the scene, I noticed that the body had rashes all over her
+    with red lines on her neck which looked to be scratches.
   isNarator: 1
   shouldChangeScene: 0
   nextSceneName: 

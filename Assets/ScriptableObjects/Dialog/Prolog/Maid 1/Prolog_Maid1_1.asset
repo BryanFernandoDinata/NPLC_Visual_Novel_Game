@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 9069ba38edad63e42a50824135e26c8e, type: 2}
   Dialog: "I-I don\u2019t know I was just doing my duties when i suddenly saw her
-    on the floor\u201D\r\n* Her voice was laced with panic\r\n"
+    on the floor"
   isNarator: 0
   shouldChangeScene: 0
   nextSceneName: 

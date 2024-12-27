@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07df8cc0cf4f0cf479b317b17d714621, type: 3}
-  m_Name: IntroPuzzle1_Butler_1
+  m_Name: IntroToPuzzle1_Narator_8
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: 6d016d5d25e9c0648914605b21a1a939, type: 2}
-  Dialog: "Of course, I\u2019ll be back in a minute"
-  isNarator: 0
+  characterData: {fileID: 11400000, guid: 7d0e694a6a7919c47b9de361066c4730, type: 2}
+  Dialog: The head butler says as he gives me a different device. I hand the Wowrack
+    device as I take the other one.
+  isNarator: 1
   shouldChangeScene: 0
   nextSceneName: 
   isSpeaker1: 0
