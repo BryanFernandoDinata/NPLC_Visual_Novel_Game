@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07df8cc0cf4f0cf479b317b17d714621, type: 3}
+  m_Script: {fileID: 11500000, guid: 440646462864aaf42ba81337f7760712, type: 3}
   m_Name: IntroToPuzzle1_Narator_9
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 7d0e694a6a7919c47b9de361066c4730, type: 2}
@@ -18,8 +18,8 @@ MonoBehaviour:
     I take one wrong step. The note in my pocket must be from the very same murderer
     and from hereon I shouldn\u2019t trust anyone and this might be the key to find
     out what happened"
-  isNarator: 1
-  shouldChangeScene: 0
+  isNarator: 0
+  shouldChangeScene: 1
   nextSceneName: 
   isSpeaker1: 0
   dialogExpressionIndex: 0

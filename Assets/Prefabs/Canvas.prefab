@@ -605,85 +605,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6257665832586754275}
   m_CullTransparentMesh: 1
---- !u!1 &6268411273603834179
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7993125223623200102}
-  - component: {fileID: 2879474988914585979}
-  - component: {fileID: 702997859582545207}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7993125223623200102
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6268411273603834179}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -489.33337, y: -231.83333, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1595991525587768290}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2879474988914585979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6268411273603834179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!114 &702997859582545207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6268411273603834179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_MoveRepeatDelay: 0.5
-  m_MoveRepeatRate: 0.1
-  m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
-  m_ScrollDeltaPerTick: 6
 --- !u!1 &6656410792917063364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +928,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8004966032620430034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2bc79c667ce97488564073a74fafc2, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cd240451c21bc64eb512c697e6ca062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8145123173953507357
@@ -1118,7 +1039,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7993125223623200102}
   - {fileID: 2586867930156431699}
   - {fileID: 2379346492838201919}
   - {fileID: 8563302835833803481}
@@ -1202,53 +1122,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 9083575014327007682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94f8e28dc9b94fc43962310af0abcf1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 37a3ca5a727f21149ba134ce386aa976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameCompletionStatus: 0
+  sceneToLoadIfWin: 
+  sceneToLoadIfDraw: 
+  sceneToLoadIfLose: 
   speaker1: {fileID: 1871330972068099991}
   speaker2: {fileID: 872862844391054127}
-  dialogBox: {fileID: 6676120594168805336}
+  dialogBox: {fileID: 6257665832586754275}
   nameBox: {fileID: 8145123173953507357}
   nameText: {fileID: 430495048485897129}
   dialogText: {fileID: 7424642948965539352}
   pressEObject: {fileID: 5183931112326504709}
-  dialogLines:
-  - {fileID: 11400000, guid: e13f3fad7e70d574d941f252b8e9f0fb, type: 2}
-  - {fileID: 11400000, guid: a829d96bc58844b4cb0101e6455522b6, type: 2}
-  - {fileID: 11400000, guid: be0ac66883f0c8d43bca860b478dcfbb, type: 2}
-  - {fileID: 11400000, guid: 098f54cfe7cd9fd4cafdc7923de6302c, type: 2}
-  - {fileID: 11400000, guid: c1060f1b2864bea4681a2db9da875aa7, type: 2}
-  - {fileID: 11400000, guid: 600dd4178804d304ab7c146160218ac1, type: 2}
-  - {fileID: 11400000, guid: 4d19806dfffc7374da460f8325ebac86, type: 2}
-  - {fileID: 11400000, guid: f0357aca4142d1344bef0862c85d5f2c, type: 2}
-  - {fileID: 11400000, guid: f9a8b9ac0f8cb8340acbe770b17bf0f6, type: 2}
-  - {fileID: 11400000, guid: 98b0071226f8ea04da1673f1b7981569, type: 2}
-  - {fileID: 11400000, guid: fbd19d7cea1be8d4ead4e8eeac0ceab4, type: 2}
-  - {fileID: 11400000, guid: e064e2c8331dea74599dfbce5c4d63d0, type: 2}
-  - {fileID: 11400000, guid: e48b8e3b5f6c37045a53b6a1d839594b, type: 2}
-  - {fileID: 11400000, guid: b1d776f7324ba8d4ebba93c434d0d628, type: 2}
-  - {fileID: 11400000, guid: 28941d2090acde74399f81cc2a478551, type: 2}
-  - {fileID: 11400000, guid: 6594408df1e517b4c923a7cd5462e19a, type: 2}
-  - {fileID: 11400000, guid: 2818d012bd21e1747b0d37bead44b914, type: 2}
-  - {fileID: 11400000, guid: add086264119997409350a8a51b15b01, type: 2}
-  - {fileID: 11400000, guid: 63a4ea87dc14c2646b0011b8c5e921cc, type: 2}
-  - {fileID: 11400000, guid: ceab17a4b6934204db98130fffe51381, type: 2}
-  - {fileID: 11400000, guid: ed8032b572785644fb26205dbd804b30, type: 2}
-  - {fileID: 11400000, guid: 2680b206823e3de49b03e335a2f73269, type: 2}
-  - {fileID: 11400000, guid: 67ed1304e4501d94c8e9069d803bcc53, type: 2}
-  - {fileID: 11400000, guid: 530af3e6ec5ad544b906556b14c9890b, type: 2}
-  - {fileID: 11400000, guid: 7f734bfd13750204ea9f979008663f05, type: 2}
-  - {fileID: 11400000, guid: 51806e91f08bcf142b22b90ac1785db6, type: 2}
-  - {fileID: 11400000, guid: 245bd5e2e13112b488d226c4ae14fd4e, type: 2}
-  - {fileID: 11400000, guid: 53507146efa4c4249a7c956d19e26a10, type: 2}
-  - {fileID: 11400000, guid: b0ce24fac16dafd4aba652dc14bcbc6d, type: 2}
-  - {fileID: 11400000, guid: c51a0a40f1eaf50428b8372e8a4788af, type: 2}
-  - {fileID: 11400000, guid: 299086e085c35ef408166e1254637195, type: 2}
-  - {fileID: 11400000, guid: 0bb062210594a2245aaa873128221b45, type: 2}
-  - {fileID: 11400000, guid: a17062f6880dfbf45af55865af7d3137, type: 2}
-  - {fileID: 11400000, guid: 4d0cd33cd3614ee46acddff9b57bc1ed, type: 2}
-  - {fileID: 11400000, guid: 6a6bd4cb813aa9e4ea772cd5eca997e7, type: 2}
+  dialogLines: []
   currentLine: 0
-  wordSpeed: 0.04
+  wordSpeed: 0.02
   naratorDialogText: {fileID: 8889630485408238736}
   blackPanelAnim: {fileID: 234437498660170040}

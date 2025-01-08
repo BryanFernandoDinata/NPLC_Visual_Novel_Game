@@ -1,18 +1,21 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class UIController : MonoBehaviour
+public class UIController : MonoBehaviour 
 {
+
     public static UIController instance;
-    public bool shouldFadeToBlack = false;
-    public bool shouldUnfade = false;
-    public float fadeDuration = 0;
 
-    public Image fadePanel;
+    public Image fadeScreen;
+    public float fadeSpeed;
+    public bool shouldFadeToBlack;
+    public bool shouldFadeFromBlack;
 
-    private void Awake() 
+	// Use this for initialization
+	void Start () 
     {
         if(instance == null)
         {
@@ -20,25 +23,55 @@ public class UIController : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }else
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
+        }
+	}
+	
+	// Update is called once per frame
+	void Update () 
+    {
+
+        if (shouldFadeToBlack)
+        {
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
+
+            if(fadeScreen.color.a == 1f)
+            {
+                shouldFadeToBlack = false;
+            }
+        }
+
+        if (shouldFadeFromBlack)
+        {
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime));
+
+            if (fadeScreen.color.a == 0f)
+            {
+                shouldFadeFromBlack = false;
+            }
         }
     }
-    public void FadeToBlack(string _sceneToLoad)
+
+    public void FadeToBlack()
     {
-        StartCoroutine(fade(_sceneToLoad));
+        shouldFadeToBlack = true;
+        shouldFadeFromBlack = false;
     }
-    public void Unfade(string _sceneToLoad)
+
+    public void FadeFromBlack()
     {
-        StartCoroutine(deFade(_sceneToLoad));
+        shouldFadeToBlack = false;
+        shouldFadeFromBlack = true;
     }
-    IEnumerator fade(string _theSceneToLoad)
+    public void LoadSceneWithLoading(string _sceneToLoad)
     {
-        yield return new WaitForSeconds(fadeDuration);
+        StartCoroutine(LoadScene(_sceneToLoad));
+    }
+    IEnumerator LoadScene(string _theSceneToLoad)
+    {
+        FadeToBlack();
+        yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene(_theSceneToLoad);
-    }
-    IEnumerator deFade(string _theSceneToLoad)
-    {
-        yield return new WaitForSeconds(fadeDuration);
-        SceneManager.LoadScene(_theSceneToLoad);
+        FadeFromBlack();
     }
 }

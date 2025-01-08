@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07df8cc0cf4f0cf479b317b17d714621, type: 3}
+  m_Script: {fileID: 11500000, guid: 440646462864aaf42ba81337f7760712, type: 3}
   m_Name: Prolog_Narator3
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 7d0e694a6a7919c47b9de361066c4730, type: 2}
-  Dialog: As I observed the scene, I noticed that the body had rashes all over her
-    with red lines on her neck which looked to be scratches.
-  isNarator: 1
+  Dialog: "Hushed whispers was heard voicing out concerns, speculations, and curiosity\r"
+  isNarator: 0
   shouldChangeScene: 0
   nextSceneName: 
   isSpeaker1: 0
